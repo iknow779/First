@@ -1,0 +1,23 @@
+body{
+    margin: 0rem 2rem;
+}
+details{
+    width: 30%;
+}
+summary{
+    list-style-type: none;
+    font-family: cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 3rem;
+}
+summary:hover{
+    transform: scale(1.2);
+}
+ul li{
+    list-style-type: none;
+    cursor: pointer;
+}
+ul li:hover{
+    text-decoration: underline;
+}
