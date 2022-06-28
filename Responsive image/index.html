@@ -1,1 +1,20 @@
+<!--Fix low resolution images problem-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- the 'image.png' file doesn't exist here, it's just to refer to your file.
+      imageresizer.com is a good tool to resize your images without losing its quality-->
+    <img src="image.png" alt="description goes here"
+    srcset="imageFor1xScreen 1x,
+            imageFor2xScreen 2x
+            imageFor3xScreen 3x"
+    >
+</body>
+</html>
