@@ -1,11 +1,12 @@
 // adding action to the button
 document.querySelector("#verify").addEventListener("click", compare);
-var guessLeft=5;
 // Returns a random integer from 1 to 100:
 const rightGuess = Math.floor(Math.random() * 100) + 1;
 const userInput = document.getElementById("userInput");
 const verify = document.getElementById("verify");
 const userHint = document.querySelector("span");
+// setting amount of guesses available at start using var because it will be changing with time
+var guessLeft=5;
 
 function compare(){
     
