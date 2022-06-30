@@ -26,7 +26,7 @@ function compare(){
         verify.disabled=true;
     }
     else{
-        userHint.innerHTML=`You lost!!!`;
+        userHint.innerHTML=`You lost!!! <br> The answer was ${rightGuess}`;
         verify.disabled=true;
     }
 
