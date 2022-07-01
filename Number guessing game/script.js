@@ -10,9 +10,9 @@ var guessLeft=5;
 
 function compare(){
     
-    var justGuess=document.querySelector("input").value;
+    var userGuess=document.querySelector("input").value;
     //converting to a number
-    var userGuess=Number(justGuess);
+    userGuess=Number(userGuess);
     //reducing amount of guesses
     guessLeft--;
     // console.log(rightGuess); if you want to test it
