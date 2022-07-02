@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    display: block;
+    font-family: cursive;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+li{
+    list-style-type: none;
+}
