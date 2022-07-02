@@ -8,25 +8,22 @@ document.querySelector("#submitButton").addEventListener("click", myFunc);
 function myFunc(){
   const username = document.querySelector('#username').value;
   var password = document.querySelector('#password').value;
-  var select = Array.from(document.querySelectorAll('#form input')).reduce((acfc, input)=> ({...acfc, [input.id]: input.value}), {});
-  console.log(select);
-  console.log(username);
-  console.log(password.length);
+// checking eligibility
   if(username.length>=5 && password.length>=8)
   {
-    board.innerHTML = document.querySelector('#username').value + ' is successfully created <br> click below to LogIn <br> <button id="loginSign">Go to Login</button>';
+    board.innerHTML = 'An account for '+document.querySelector('#username').value + ' is successfully created <br> click below to Login <br> <button id="loginSign">Go to Login</button>';
   }
   else{
-    alert('Please input a username with at least 5 characters');
+    alert('Please input a username with at least 5 characters and a password with at least 8 characters');
   }
   document.querySelector("#loginSign").addEventListener("click", myFuncLogin);
   function myFuncLogin(){
     board.innerHTML=`
     <form id="form"> 
     <fieldset> 
-    <legend>LogIn</legend> 
+    <legend>Login</legend> 
     <input type="text" id="loginUsername" maxlength="10" required>
-    <input type="password" id="loginPassword" minlength="8"> <button id="loginButton">LogIn</button> </form>
+    <input type="password" id="loginPassword" minlength="8"> <button id="loginButton">Login</button> </form>
     </fieldset>
     `;
     document.querySelector('#loginButton').addEventListener("click", userLoginFunc);
@@ -34,7 +31,7 @@ function myFunc(){
       var loginUsername = document.querySelector('#loginUsername').value;
       var loginPassword = document.querySelector('#loginPassword').value;
       if(loginUsername != username || loginPassword != password){
-        alert('wrong credentials');
+        alert('Sorry, wrong credentials');
       }
       else{
         pageBody= document.querySelector('#pageBody');
@@ -83,12 +80,12 @@ function myFunc(){
                   userHint.innerHTML=`You guessed ${userGuess}, and have ${guessLeft} guess(es) left. Try Bigger`;
               }
               else if(rightGuess==userGuess){
-                  userHint.innerHTML=`You guessed ${userGuess}. You won!!!`;
+                  userHint.innerHTML=`You guessed ${userGuess}.Congrats ${username} You won!!!`;
                   verify.disabled=true;
 
               }
               else{
-                  userHint.innerHTML=`You lost!!! <br> The answer was ${rightGuess}`;
+                  userHint.innerHTML=`Sorry ${username}You lost!!! <br> The answer was ${rightGuess}`;
                   verify.disabled=true;
               }
 
