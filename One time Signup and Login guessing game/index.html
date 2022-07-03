@@ -13,10 +13,12 @@
 
         <h1>You will need to signup first</h1>
         <form id="form">
-            <legend>signUp</legend>
-            <input  type="text" id="username" maxlength="10" minlength="5" required="true">
-            <input type="password" id="password" minlength="8" required>
-            <button id="submitButton" type="submit">Submit</button>
+            <fieldset>
+                <legend>signUp</legend>
+                <input  type="text" id="username" placeholder="Username" maxlength="10" minlength="5" required="true">
+                <input type="password" id="password" placeholder="Password" minlength="8" required>
+                <button id="submitButton" type="submit">Submit</button>
+            </fieldset>
         </form>
         <p id="userDetails">Waiting...</p>
 
